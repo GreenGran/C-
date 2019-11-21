@@ -1,0 +1,30 @@
+using System;
+
+public class point 
+{
+    double  x;
+    double  y;
+    public point(int x , int y)
+    {
+        this.x = x ;
+        this.y = y ;
+    }
+    public double dis (double x , double y)
+    {
+        double powx = Math.Abs(x - this.x);
+        double powy = Math.Abs(y - this.y);
+        powx = Math.Pow(powx , 2);
+          powy = Math.Pow(powy , 2);
+          double dista= Math.Sqrt(powx + powy);
+        return dista;
+    }
+    
+}
+class Program
+{
+    static void Main() {
+        point p1 = new point (0 , 0);
+     double destant = p1.dis(4, 0);
+     Console.Write(destant);
+    }
+}
