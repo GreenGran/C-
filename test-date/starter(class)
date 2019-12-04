@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace date_practice
+{
+    class starter
+    {
+        Date date1 = new Date(1, 1, 2001);
+        Date date2 = new Date(1, 1, 2001);
+        int compare;
+        public void opener()// starts the whole program
+        {
+            date1.setday(2);
+            date1.setmonth(2);
+            date1.setyear(2002);
+
+            compare=date1.compareTo(date2);
+            Console.WriteLine(compare);
+            Console.WriteLine(date1.ToString());
+        }
+    }
+}
