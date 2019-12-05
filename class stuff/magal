@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace practice
+{
+    class magal
+    {
+        points p;
+        double rad;
+
+        public magal(points p, double rad)
+        {
+            this.p = p;
+            this.rad = rad;
+        }
+        public magal(int  x,int y, double rad)
+        {
+            this.p.setx(x);
+            this.p.sety(y);
+            this.rad = rad;
+        }
+        public magal(magal toCopy)
+        {
+            p = toCopy.p;
+            rad = toCopy.rad;
+        }
+        public double getr() { return rad; }
+    }
+}
