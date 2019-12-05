@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace practice
+{
+    class points
+    {
+        double x;
+        double y;
+
+
+        public  points(double x, double y)
+        {
+            this.x = x;
+            this.y = y;
+        }
+
+
+        public void  setx(double x) { this.x = x; }
+        public void  sety(double y) { this.y = y; }
+        public double getx() { return  x; }
+        public double gety() { return y; }
+    }
+}
