@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace home_work_page_6
+{
+    class Travler
+    {
+        Passport passport;
+        bool haspaid;
+
+
+
+
+        public Passport getpass()
+        {
+            return passport;
+        }
+
+        public Travler(Passport passport, bool haspaid)
+        {
+            this.passport = new Passport(passport);
+            this.haspaid = haspaid;
+
+        }
+        public void pay()
+        {
+            haspaid = true;
+        }
+
+        public override String ToString()
+        {
+            return passport.ToString()+"\n"+"paymet:"+haspaid;
+        }
+
+        public bool CheckTravle(Date travleDate)
+        {
+            if (passport.isValid(travleDate) && haspaid)
+                return true;
+            return false;
+        }
+    }
+}
