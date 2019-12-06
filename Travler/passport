@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace home_work_page_6
+{
+    class Passport
+    {
+        Date exDate;
+        private String name;
+        int PassportId;
+
+        public String getName() { return name; }
+        public int getPassportId() { return PassportId; }
+        public Date getexDate() { return exDate; }
+        public void setName(String _name) { name = _name; }
+        public void setexDate (int _PassportId) { PassportId = _PassportId; }
+
+        public Passport(Passport passport)// copy con
+        {
+            this.name = passport.name;
+            PassportId = passport.PassportId;
+            exDate = new Date(passport.exDate);
+          
+        }
+        public Passport(String name,int PassportId,Date exDate)
+        {
+            this.name = name;
+            this.PassportId = PassportId;
+            this.exDate = exDate;
+        }
+        public bool isValid(Date datechecked)
+        {
+           
+            if (exDate.compareTo(datechecked) > -1) { return true; }
+            
+            return false;
+
+        }
+        public override string ToString()//returns a string in a better looking formate
+        {
+            return "name:"+name + "\n"+"passport Id:"+ PassportId + "\n"+"exp date:"+exDate.ToString() ;
+        }
+        public void SetExpiryDate(Date expiryDate)
+        {
+            exDate = new Date(expiryDate);
+
+        }
+
+
+    }
+}
