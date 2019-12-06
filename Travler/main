@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace home_work_page_6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Date passdate = new Date(1, 2, 3);
+            Date today = new Date(06, 12, 2019);
+            Date extendTo = new Date(17, 7, 2420);
+            Passport pass = new Passport("yoni",222,passdate);
+            Passport pass2 = new Passport(pass);
+            pass.getexDate().setyear(2222);
+            pass.setName("nof");
+            Travler dude = new Travler(pass, true);
+            Console.WriteLine(dude.ToString());
+            Console.WriteLine(dude.CheckTravle(today));
+
+        }
+    }
+}
