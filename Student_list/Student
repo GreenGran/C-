@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace student_list
+{
+    class Student
+    {
+        string name;
+        string phoneNum;
+        Parent parent;
+
+
+      public  Student(string name, string phoneNum,Parent parent)
+        {
+            this.name = name;
+            this.phoneNum = phoneNum;
+            this.parent = parent;
+        }
+       public Student()
+        {
+            name = "null";
+            phoneNum = "n/a";
+            parent.set_name("null");
+            parent.set_cellNum("n/a");
+
+        }
+        public  string Getname(){return name;}
+        public string GetphoneNum(){return phoneNum;}
+        public Parent GetParent(){return parent;}
+
+        public void set_name(string name) { this.name = name; }
+        public void set_phoneNum(string phoneNum) { this.phoneNum = phoneNum; }
+        public void set_parent(Parent parent) { this.parent = parent; }
+    }
+}
