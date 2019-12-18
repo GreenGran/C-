@@ -1,65 +1,32 @@
 using System;
-
 using System.Collections.Generic;
-
 using System.Linq;
-
 using System.Text;
-
 using System.Threading.Tasks;
-
-
-
-namespace ConsoleApp1
-
+namespace student_list
 {
-
     class StudentList
-
     {
-
         const int max = 40;
-
         Student[] list = new Student[max];
-
-
-
         public StudentList()
 
         {
-
             int pos = -1;
-
             for (int i = 0; i < 40; i++) // making a allocation per student
-
             {
-
                 pos++;
-
                 list[i] = new Student();
-
             }
-
         }
-
-
-
         public void Add(Student st)
-
-        {
-
+       {
             for (int i = 0; i < 40; i++)
-
             {
-
                 if (list[i].GetName() == "null")
-
                 {
-
                     list[i] = new Student(st);
-
                     break;
-
                 }
 
             }
@@ -67,79 +34,40 @@ namespace ConsoleApp1
             Console.WriteLine("The class is full try to remove a student");
 
         }
-
-
-
         public void Del(string name) // why STUDENT ?
-
         {
-
             for (int i = 0; i < 40; i++)
-
             {
-
                 if (list[i].GetName() == name)
-
                 {
-
                     list[i].SetName("null");
-
                 }
-
                 Console.WriteLine(name + " Deleted");
-
             }
-
         }
-
-
 
         public Student GetStudent(string name)
-
         {
-
             for (int i = 0; i < 40; i++)
-
-            {
-
+           {
                 if (list[i].GetName() == name)
-
                 {
-
-                    return list[i];
-
+                   return list[i];
                 }
-
             }
-
             Console.WriteLine("Student Not Exist");
-
             return null;
-
         }
-
-
-
         public override string ToString()
-
         {
-
             for(int i = 0; i < 40;i++)
-
             {
-
                 for (int j = i; j < 40; j++)
-
                 {
-
                     if (list[j].GetName() != "null" && list[i].GetName().CompareTo(list[j].GetName()) < 0)
-
                     {
-
-                        Student temp = new Student(list[i]);
-
+                       Student temp = new Student(list[i]);
                         list[i] = list[j];
-
                         list[j] = temp;
 
                     }
@@ -149,15 +77,10 @@ namespace ConsoleApp1
             }
 
             string st = "";
-
             for(int i = 0; i < 40; i++)
-
             {
-
                 st += list[i].GetName() + "\n";
-
             }
-
             return st;
 
         }
