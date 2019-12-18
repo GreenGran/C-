@@ -34,11 +34,11 @@ namespace student_list
             Console.WriteLine("The class is full try to remove a student");
 
         }
-        public void Del(string name) // why STUDENT ?
+        public void Del(string name) 
         {
             for (int i = 0; i < 40; i++)
             {
-                if (list[i].GetName() == name)
+                if (list[i].GetName() == name)// chacks if there is en empty slot
                 {
                     list[i].SetName("null");
                 }
@@ -55,7 +55,7 @@ namespace student_list
                    return list[i];
                 }
             }
-            Console.WriteLine("Student Not Exist");
+            Console.WriteLine("no student of the name "+st.getname()+" found");
             return null;
         }
         public override string ToString()
